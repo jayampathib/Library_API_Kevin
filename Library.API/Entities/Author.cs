@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Library.API.Entities
 {
@@ -25,5 +23,8 @@ namespace Library.API.Entities
         [Required]
         [MaxLength(50)]
         public string Genre { get; set; }
+
+        public ICollection<Book> Books { get; set; }
+            = new List<Book>();
     }
 }
