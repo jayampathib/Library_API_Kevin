@@ -50,6 +50,7 @@ namespace Library.API
                 app.UseExceptionHandler();
             }
 
+            //automapper 5.2
             AutoMapper.Mapper.Initialize(cfg=>
             {
                 cfg.CreateMap<Author, Models.AuthorDto>()
