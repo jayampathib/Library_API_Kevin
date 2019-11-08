@@ -14,6 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using NLog.Extensions.Logging;
 
 namespace Library.API
 {
@@ -53,6 +54,9 @@ namespace Library.API
             loggerFactory.AddConsole();
 
             loggerFactory.AddDebug(LogLevel.Information);
+
+            //loggerFactory.AddProvider(new NLog.Extensions.Logging.NLogLoggerProvider());
+            //loggerFactory.AddNLog(); added to Program.cs
 
             if (env.IsDevelopment())
             {
